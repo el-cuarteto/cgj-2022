@@ -28,6 +28,11 @@ public class InventoryObject : ScriptableObject
         itemsDict.Remove(name);
     }
 
+    public void HasItem(ItemObject item)
+    {
+        itemsDict.ContainsValue(item);
+    }
+
     public void RemoveItem(ItemObject item)
     {
         RemoveItem(item.name);

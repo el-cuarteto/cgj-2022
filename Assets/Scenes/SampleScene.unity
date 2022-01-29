@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 239639310}
   - component: {fileID: 239639309}
   - component: {fileID: 239639308}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 661082889}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Center (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 23
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -838,7 +838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1640891803}
   - component: {fileID: 1640891805}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dual Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -890,7 +890,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 1
@@ -1010,7 +1010,7 @@ GameObject:
   - component: {fileID: 2137652443}
   - component: {fileID: 2137652442}
   - component: {fileID: 2137652441}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

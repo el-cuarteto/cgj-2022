@@ -11,6 +11,8 @@ public class DialogDisplay : MonoBehaviour
     private SpeakerUI speakerUIRight;
 
     private int activeLineIndex = 0;
+    private bool isActiveDialog = true;
+    private string keyToPress = "space";
 
     void Start()
     {
@@ -23,7 +25,7 @@ public class DialogDisplay : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (isActiveDialog && Input.GetKeyDown(keyToPress))
         {
             AdvanceConversation();
         }
@@ -41,6 +43,7 @@ public class DialogDisplay : MonoBehaviour
             speakerUILeft.Hide();
             speakerUIRight.Hide();
             activeLineIndex = 0;
+            isActiveDialog = false;
         }
     }
 

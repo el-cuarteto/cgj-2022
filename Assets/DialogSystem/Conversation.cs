@@ -10,7 +10,7 @@ public struct Line
 
     // Text to display as part of this line.
     [TextArea(2, 5)]
-    public string Text;
+    public string text;
 }
 
 [CreateAssetMenu(fileName = "New Conversation", menuName = "Conversation")]

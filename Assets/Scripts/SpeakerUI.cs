@@ -5,32 +5,21 @@ public class SpeakerUI : MonoBehaviour
 {
     public Image portrait;
     public Text displayName;
-    public Text dialog;
 
-    private Character speaker;
+    private Character _speaker;
     public Character Speaker
     {
-        get { return speaker; }
+        get { return _speaker; }
         set {
-            speaker = value;
-            portrait.sprite = speaker.portrait;
-            displayName.text = speaker.displayName;
+            _speaker = value;
+            portrait.sprite = _speaker.portrait;
+            displayName.text = _speaker.displayName;
         }
-    }
-
-    public string Dialog
-    {
-        set { dialog.text = value; }
-    }
-
-    public bool HasSpeaker()
-    {
-        return speaker != null;
     }
 
     public bool SpeakerIs(Character character)
     {
-        return speaker == character;
+        return _speaker == character;
     }
 
     public void Show()

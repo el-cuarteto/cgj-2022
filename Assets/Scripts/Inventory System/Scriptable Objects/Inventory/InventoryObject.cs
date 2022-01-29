@@ -28,9 +28,9 @@ public class InventoryObject : ScriptableObject
         itemsDict.Remove(name);
     }
 
-    public void HasItem(ItemObject item)
+    public bool HasItem(ItemObject item)
     {
-        itemsDict.ContainsValue(item);
+        return itemsDict.ContainsValue(item);
     }
 
     public void RemoveItem(ItemObject item)

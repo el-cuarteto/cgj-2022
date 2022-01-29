@@ -88,7 +88,7 @@ public class DialogDisplay : MonoBehaviour
         dialogPanel.SetActive(false);
     }
 
-    void ShowDialogPanel()
+    public void ShowDialogPanel()
     {
         dialogPanel.SetActive(true);
     }

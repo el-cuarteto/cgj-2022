@@ -37,10 +37,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 3.65
+    m_Start: 1
     m_ClipIn: 0
-    m_Asset: {fileID: 6906249040068282179}
-    m_Duration: 2
+    m_Asset: {fileID: -8756125265702577588}
+    m_Duration: 4
     m_TimeScale: 1
     m_ParentTrack: {fileID: -3728351696315436672}
     m_EaseInDuration: 0
@@ -55,25 +55,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -88,10 +70,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PoetryClipAsset
   - m_Version: 1
-    m_Start: 1
+    m_Start: 6.533333333333333
     m_ClipIn: 0
-    m_Asset: {fileID: -8756125265702577588}
-    m_Duration: 2
+    m_Asset: {fileID: 8602060126310150069}
+    m_Duration: 4
     m_TimeScale: 1
     m_ParentTrack: {fileID: -3728351696315436672}
     m_EaseInDuration: 0
@@ -100,49 +82,13 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -202,7 +148,7 @@ MonoBehaviour:
   m_Clips: []
   m_Markers:
     m_Objects: []
---- !u!114 &6906249040068282179
+--- !u!114 &8602060126310150069
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,8 +158,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f01231c385768a4882685e357a2c6ed, type: 3}
-  m_Name: PoetryClipAsset
+  m_Name: PoetryClipAsset(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   easeInTime: 0.5
   easeOutTime: 0.5
-  poetryText: Y me gusta el queso
+  poetryText: Me gusta la uva

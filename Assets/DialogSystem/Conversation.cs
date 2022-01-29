@@ -16,7 +16,6 @@ public struct Line
 [CreateAssetMenu(fileName = "New Conversation", menuName = "Conversation")]
 public class Conversation : ScriptableObject
 {
-    public string conversationId;
     public Character speakerLeft;
     public Character speakerRight;
     public Line[] lines;

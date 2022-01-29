@@ -27,6 +27,22 @@ public class DisplayInventory : MonoBehaviour
 
     private void displayItems()
     {
+        // Remove items from the screen
+        List<ItemObject> itemsToRemove = new List<ItemObject>();
+        foreach (var kv in displayedItems)
+        {
+            if (!inventory.itemsDict.ContainsKey(kv.Key.name))
+            {
+                Destroy(kv.Value);
+                itemsToRemove.Add(kv.Key);
+            }
+        }
+        foreach (ItemObject itemToRemove in itemsToRemove)
+        {
+            displayedItems.Remove(itemToRemove);
+        }
+
+        // Display current items
         int i = 0;
         foreach (var kv in inventory.itemsDict)
         {

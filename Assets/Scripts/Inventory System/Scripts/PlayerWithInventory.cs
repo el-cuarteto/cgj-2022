@@ -8,7 +8,8 @@ public class PlayerWithInventory : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // For development purposes
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             inventory.Clear();
         }

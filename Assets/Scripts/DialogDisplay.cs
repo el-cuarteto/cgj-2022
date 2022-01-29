@@ -10,6 +10,7 @@ public class DialogDisplay : MonoBehaviour
 
     public GameObject speakerLeft;
     public GameObject speakerRight;
+    public GameObject dialogPanel;
 
     private SpeakerUI _speakerUILeft;
     private SpeakerUI _speakerUIRight;
@@ -31,13 +32,23 @@ public class DialogDisplay : MonoBehaviour
 
         _speakerUILeft.Speaker = conversation.speakerLeft;
         _speakerUIRight.Speaker = conversation.speakerRight;
+
+        dialogPanel.SetActive(false);
     }
 
     void Update()
     {
-        if (_isActiveDialog && Input.GetKeyDown(_keyToPress))
+        if (Input.GetKeyDown(_keyToPress))
         {
-            AdvanceConversation();
+            if (_isActiveDialog)
+            {
+                AdvanceConversation();
+                dialogPanel.SetActive(true);
+            }
+            else
+            {
+                HideDialogPanel();
+            }
         }
     }
 
@@ -54,7 +65,14 @@ public class DialogDisplay : MonoBehaviour
             _speakerUIRight.Hide();
             _activeLineIndex = 0;
             _isActiveDialog = false;
+            HideDialogPanel();
         }
+    }
+
+    void HideDialogPanel()
+    {
+        Dialog = "";
+        dialogPanel.SetActive(false);
     }
 
     void DisplayLine()

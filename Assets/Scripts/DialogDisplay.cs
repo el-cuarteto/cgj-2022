@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class DialogDisplay : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class DialogDisplay : MonoBehaviour
     private int activeLineIndex = 0;
     private bool isActiveDialog = true;
     private string keyToPress = "space";
+    private float dialogDelay = 0.05f;
 
     void Start()
     {
@@ -54,21 +56,27 @@ public class DialogDisplay : MonoBehaviour
 
         if (speakerUILeft.SpeakerIs(character))
         {
-            SetDialog(speakerUILeft, speakerUIRight, line.text);
+            StartCoroutine(SetDialog(speakerUILeft, speakerUIRight, line.text));
         }
         else
         {
-            SetDialog(speakerUIRight, speakerUILeft, line.text);
+            StartCoroutine(SetDialog(speakerUIRight, speakerUILeft, line.text));
         }
     }
 
-    void SetDialog(
+    IEnumerator SetDialog(
         SpeakerUI activeSpeakerUI,
         SpeakerUI inactiveSpeakerUI,
-        string text
+        string fullText
     ) {
-        activeSpeakerUI.Dialog = text;
+        // Activating the right UI
         activeSpeakerUI.Show();
         inactiveSpeakerUI.Hide();
+
+        // Displaying each letter after a delay
+        for(int i = 0; i <= fullText.Length; i++) {
+            yield return new WaitForSeconds(dialogDelay);
+            activeSpeakerUI.Dialog = fullText.Substring(0, i);
+        }
     }
 }

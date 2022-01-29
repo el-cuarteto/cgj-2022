@@ -91,6 +91,7 @@ public class DialogDisplay : MonoBehaviour
     public void ShowDialogPanel()
     {
         dialogPanel.SetActive(true);
+        AdvanceConversation();
     }
 
     void DisplayLine()

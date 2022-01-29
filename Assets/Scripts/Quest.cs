@@ -10,11 +10,15 @@ public class Quest : MonoBehaviour
     // Reference to the DialogDisplay
     public DialogDisplay dialogDisplay;
 
-    // Conversations should have 4 entries:
+    // Conversations that expect should have 4 entries:
     // 0: initial conversation
     // 1: quest not finished
-    // 2: gives / receives item
+    // 2: expects item
     // 3: quest succeeded
+    // Conversations that give items should have 3 entries:
+    // 0: initial conversation
+    // 1: gives item
+    // 2: quest succeeded
     public List<Conversation> conversations = new List<Conversation>();
     private int _currentConversationIndex = 0;
 
@@ -26,6 +30,8 @@ public class Quest : MonoBehaviour
 
     void Update()
     {
+        // TODO: falta verificar que estés en proximidad
+        // con el character
         if (Input.GetKeyDown("e"))
         {
             StartConversation();
@@ -48,12 +54,14 @@ public class Quest : MonoBehaviour
             // will show 1 or 2
             ShowConversation();
 
-            if (_currentConversationIndex == 2)
+            if (givesItem)
             {
-                if (givesItem)
-                {
-                    player.inventory.AddItem(itemToGive);
-                }
+                player.inventory.AddItem(itemToGive);
+                _currentConversationIndex = 2;
+            }
+
+            if (expectsItem && _currentConversationIndex == 2)
+            {
                 _currentConversationIndex = 3;
             }
         }

@@ -4,6 +4,8 @@ using System.Collections;
 
 public class DialogDisplay : MonoBehaviour
 {
+    // TODO: editar para que tenga varias conversaciones, y poder acceder
+    // a ellas por su ID (ejemplo: primera conversación, si tiene el objeto, si no lo tiene)
     public Conversation conversation;
     public Text dialog;
 

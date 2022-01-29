@@ -1,8 +1,8 @@
 ﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "psx/vertexlit-single-color" {
+Shader "psx/vertexlit" {
 	Properties{
-		_MainColor("Base (RGB)", Color) = (1,1,1,1)
+		_MainTex("Base (RGB)", 2D) = "white" {}
 	}
 		SubShader{
 			Tags { "RenderType" = "Opaque" }
@@ -51,7 +51,7 @@ Shader "psx/vertexlit-single-color" {
 
 						//Affine Texture Mapping
 						float4 affinePos = vertex; //vertex;				
-						o.uv_MainTex = v.texcoord;
+						o.uv_MainTex = TRANSFORM_TEX(v.texcoord, _MainTex);
 						o.uv_MainTex *= distance + (vertex.w * (UNITY_LIGHTMODEL_AMBIENT.a * 8)) / distance / 2;
 						o.normal = distance + (vertex.w * (UNITY_LIGHTMODEL_AMBIENT.a * 8)) / distance / 2;
 
@@ -74,11 +74,11 @@ Shader "psx/vertexlit-single-color" {
 						return o;
 					}
 
-					fixed4 _MainColor;
+					sampler2D _MainTex;
 
 					float4 frag(v2f IN) : COLOR
 					{
-						half4 c = _MainColor * IN.color;
+						half4 c = tex2D(_MainTex, IN.uv_MainTex / IN.normal.r) * IN.color;
 						half4 color = c * (IN.colorFog.a);
 						color.rgb += IN.colorFog.rgb * (1 - IN.colorFog.a);
 						return color;

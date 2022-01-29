@@ -6,11 +6,7 @@ using System.Collections.Generic;
 public class DialogDisplay : MonoBehaviour
 {
     // TODO: Quitar ultima ventana vacía
-    public List<Conversation> conversations = new List<Conversation>();
     public Text dialog;
-
-    public PlayerWithInventory player;
-    public ItemObject itemToGive;
 
     public GameObject speakerLeft;
     public GameObject speakerRight;
@@ -22,6 +18,14 @@ public class DialogDisplay : MonoBehaviour
     private int _activeLineIndex = 0;
     private bool _isActiveDialog = true;
     private Conversation _currentConversation;
+    public Conversation conversation {
+        set {
+            _currentConversation = value;
+            _activeLineIndex = 0;
+            _isActiveDialog = true;
+            SetSpeakers();
+        }
+    }
     private string _keyToPress = "space";
     private float _dialogDelay = 0.05f;
 
@@ -35,9 +39,6 @@ public class DialogDisplay : MonoBehaviour
         _speakerUILeft = speakerLeft.GetComponent<SpeakerUI>();
         _speakerUIRight = speakerRight.GetComponent<SpeakerUI>();
 
-        _currentConversation = conversations[0];
-        SetSpeakers();
-
         dialogPanel.SetActive(false);
     }
 
@@ -47,21 +48,12 @@ public class DialogDisplay : MonoBehaviour
         _speakerUIRight.Speaker = _currentConversation.speakerRight;
     }
 
-    void ChangeConversation(int conversationIndex)
-    {
-        _currentConversation = conversations[conversationIndex];
-        _activeLineIndex = 0;
-        _isActiveDialog = true;
-        SetSpeakers();
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(_keyToPress))
         {
             if (_isActiveDialog)
             {
-                // TODO: Accept item only if it is not the first dialogue and itemToAccept != null
                 AdvanceConversation();
                 dialogPanel.SetActive(true);
             }
@@ -86,9 +78,6 @@ public class DialogDisplay : MonoBehaviour
             _activeLineIndex = 0;
             _isActiveDialog = false;
 
-            // TODO: Give item only if it is non-null
-            player.inventory.AddItem(itemToGive);
-
             HideDialogPanel();
         }
     }
@@ -97,6 +86,11 @@ public class DialogDisplay : MonoBehaviour
     {
         Dialog = "";
         dialogPanel.SetActive(false);
+    }
+
+    void ShowDialogPanel()
+    {
+        dialogPanel.SetActive(true);
     }
 
     void DisplayLine()

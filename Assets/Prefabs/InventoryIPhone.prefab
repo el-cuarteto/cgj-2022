@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryIPhone
       objectReference: {fileID: 0}
+    - target: {fileID: 4087991779749211434, guid: 406606f6a1c9c7f48bc495625dd8bc2b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.31403294
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087991779749211434, guid: 406606f6a1c9c7f48bc495625dd8bc2b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.16429332
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087991779749211434, guid: 406606f6a1c9c7f48bc495625dd8bc2b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6132076
+      objectReference: {fileID: 0}
     - target: {fileID: 7859098638750267863, guid: 406606f6a1c9c7f48bc495625dd8bc2b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

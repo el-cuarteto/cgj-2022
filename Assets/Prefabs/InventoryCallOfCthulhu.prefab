@@ -93,7 +93,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6492734685744207268, guid: d64bfcc89729dbb49a6ce40c35a1d5b9, type: 3}
       propertyPath: m_Name
-      value: InventoryItem
+      value: InventoryCallOfCthulhu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377281589311908339, guid: d64bfcc89729dbb49a6ce40c35a1d5b9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.26607496
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377281589311908339, guid: d64bfcc89729dbb49a6ce40c35a1d5b9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3584906
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377281589311908339, guid: d64bfcc89729dbb49a6ce40c35a1d5b9, type: 3}
+      propertyPath: m_Color.r
+      value: 0.26514775
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d64bfcc89729dbb49a6ce40c35a1d5b9, type: 3}

@@ -6,9 +6,12 @@ public class DialogDisplay : MonoBehaviour
 {
     // TODO: editar para que tenga varias conversaciones, y poder acceder
     // a ellas por su ID (ejemplo: primera conversación, si tiene el objeto, si no lo tiene)
+    // TODO: Quitar ultima ventana vacía
     public Conversation conversation;
     public Text dialog;
 
+    public PlayerWithInventory player;
+    public ItemObject itemToGive;
 
     public GameObject speakerLeft;
     public GameObject speakerRight;
@@ -18,7 +21,7 @@ public class DialogDisplay : MonoBehaviour
     private SpeakerUI _speakerUIRight;
 
     private int _activeLineIndex = 0;
-    private bool _isActiveDialog = true;
+    public bool isActiveDialog = true;
     private string _keyToPress = "space";
     private float _dialogDelay = 0.05f;
 
@@ -42,8 +45,9 @@ public class DialogDisplay : MonoBehaviour
     {
         if (Input.GetKeyDown(_keyToPress))
         {
-            if (_isActiveDialog)
+            if (isActiveDialog)
             {
+                // TODO: Accept item only if it is not the first dialogue and itemToAccept != null
                 AdvanceConversation();
                 dialogPanel.SetActive(true);
             }
@@ -66,7 +70,11 @@ public class DialogDisplay : MonoBehaviour
             _speakerUILeft.Hide();
             _speakerUIRight.Hide();
             _activeLineIndex = 0;
-            _isActiveDialog = false;
+            isActiveDialog = false;
+
+            // TODO: Give item only if it is non-null
+            player.inventory.AddItem(itemToGive);
+
             HideDialogPanel();
         }
     }

@@ -9,10 +9,10 @@ public class PlayerWithInventory : MonoBehaviour
     public void Update()
     {
         // For development purposes
-        if (Input.GetKeyDown(KeyCode.Space))
+/*        if (Input.GetKeyDown(KeyCode.Space))
         {
             inventory.Clear();
-        }
+        }*/
     }
 
     public void OnTriggerEnter(Collider other)

@@ -31,4 +31,6 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
     text: Tengo hambre
   - character: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
-    text: Buen provecho
+    text: 'Buen provecho. '
+  - character: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
+    text: Toma este cuadrado

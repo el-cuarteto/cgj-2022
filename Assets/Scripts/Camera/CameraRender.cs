@@ -11,8 +11,6 @@ public class CameraRender : MonoBehaviour
     [SerializeField]
     private Camera _cameraTarget;
 
-    private RenderTexture _finalRender;
-
     [SerializeField]
     private Material _finalCameraRenderMat;
 
@@ -49,7 +47,6 @@ public class CameraRender : MonoBehaviour
 
         _cameraOrigin.targetTexture = new RenderTexture(renderTextureDescriptor);
         _cameraTarget.targetTexture = new RenderTexture(renderTextureDescriptor);
-        _finalRender = new RenderTexture(renderTextureDescriptor);
 
         _finalCameraRenderMat.SetTexture("_CameraOrigin", _cameraOrigin.targetTexture);
         _finalCameraRenderMat.SetTexture("_CameraTarget", _cameraTarget.targetTexture);

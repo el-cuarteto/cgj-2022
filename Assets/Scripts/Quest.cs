@@ -4,9 +4,6 @@ using System.Collections.Generic;
 
 public class Quest : MonoBehaviour
 {
-    // Non-playable character this quest is about
-    public Character character;
-
     // Reference to the player and its inventory
     public PlayerWithInventory player;
 

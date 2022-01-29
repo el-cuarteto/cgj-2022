@@ -1072,6 +1072,15 @@ namespace StandardAssets.Characters.Physics
 		}
 
 		/// <summary>
+		/// Sets new layers to test for collision.
+		/// </summary>
+		/// <param name="layers">New collision layers.</param>
+		public void SetCollisionLayerMask(LayerMask layers)
+        {
+			m_CollisionLayerMask = layers;
+        }
+
+		/// <summary>
 		/// Get the foot world position.
 		/// </summary>
 		public Vector3 GetFootWorldPosition()

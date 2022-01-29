@@ -11,14 +11,15 @@ public class CameraRender : MonoBehaviour
     [SerializeField]
     private Camera _cameraTarget;
 
-    private RenderTexture _finalRender;
-
     [SerializeField]
     private Material _finalCameraRenderMat;
 
     private int _screenWidth = -1;
     private int _screenHeight = -1;
-    private Rect _screenRect = new Rect();
+
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float _targetResolutionModifier = 1.0f;
 
     private void Awake()
     {
@@ -38,21 +39,29 @@ public class CameraRender : MonoBehaviour
         _screenWidth = Screen.width;
         _screenHeight = Screen.height;
 
-        _screenRect = new Rect(0, 0, _screenWidth, _screenHeight);
-
-        RenderTextureDescriptor renderTextureDescriptor;
+        RenderTextureDescriptor renderTextureOriginDescriptor;
         if (_cameraOrigin.targetTexture != null)
         {
-            renderTextureDescriptor = _cameraOrigin.targetTexture.descriptor;
+            renderTextureOriginDescriptor = _cameraOrigin.targetTexture.descriptor;
         }
         else
         {
-            renderTextureDescriptor = new RenderTextureDescriptor(_screenWidth, _screenHeight);
+            renderTextureOriginDescriptor = new RenderTextureDescriptor(_screenWidth, _screenHeight);
         }
 
-        _cameraOrigin.targetTexture = new RenderTexture(renderTextureDescriptor);
-        _cameraTarget.targetTexture = new RenderTexture(renderTextureDescriptor);
-        _finalRender = new RenderTexture(renderTextureDescriptor);
+        _cameraOrigin.targetTexture = new RenderTexture(renderTextureOriginDescriptor);
+
+        RenderTextureDescriptor renderTextureTargetDescriptor;
+        if (_cameraOrigin.targetTexture != null)
+        {
+            renderTextureTargetDescriptor = _cameraTarget.targetTexture.descriptor;
+        }
+        else
+        {
+            renderTextureTargetDescriptor = new RenderTextureDescriptor((int)((float)_screenWidth * _targetResolutionModifier), (int)((float)_screenHeight * _targetResolutionModifier));
+        }
+
+        _cameraTarget.targetTexture = new RenderTexture(renderTextureTargetDescriptor);
 
         _finalCameraRenderMat.SetTexture("_CameraOrigin", _cameraOrigin.targetTexture);
         _finalCameraRenderMat.SetTexture("_CameraTarget", _cameraTarget.targetTexture);

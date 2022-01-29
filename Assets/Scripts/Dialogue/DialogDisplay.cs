@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DialogDisplay : MonoBehaviour
 {
-    // TODO: editar para que tenga varias conversaciones, y poder acceder
-    // a ellas por su ID (ejemplo: primera conversación, si tiene el objeto, si no lo tiene)
     // TODO: Quitar ultima ventana vacía
-    public Conversation conversation;
+    public List<Conversation> conversations = new List<Conversation>();
     public Text dialog;
 
     public PlayerWithInventory player;
@@ -21,7 +20,8 @@ public class DialogDisplay : MonoBehaviour
     private SpeakerUI _speakerUIRight;
 
     private int _activeLineIndex = 0;
-    public bool isActiveDialog = true;
+    private bool _isActiveDialog = true;
+    private Conversation _currentConversation;
     private string _keyToPress = "space";
     private float _dialogDelay = 0.05f;
 
@@ -35,17 +35,31 @@ public class DialogDisplay : MonoBehaviour
         _speakerUILeft = speakerLeft.GetComponent<SpeakerUI>();
         _speakerUIRight = speakerRight.GetComponent<SpeakerUI>();
 
-        _speakerUILeft.Speaker = conversation.speakerLeft;
-        _speakerUIRight.Speaker = conversation.speakerRight;
+        _currentConversation = conversations[0];
+        SetSpeakers();
 
         dialogPanel.SetActive(false);
+    }
+
+    void SetSpeakers()
+    {
+        _speakerUILeft.Speaker = _currentConversation.speakerLeft;
+        _speakerUIRight.Speaker = _currentConversation.speakerRight;
+    }
+
+    void ChangeConversation(int conversationIndex)
+    {
+        _currentConversation = conversations[conversationIndex];
+        _activeLineIndex = 0;
+        _isActiveDialog = true;
+        SetSpeakers();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(_keyToPress))
         {
-            if (isActiveDialog)
+            if (_isActiveDialog)
             {
                 // TODO: Accept item only if it is not the first dialogue and itemToAccept != null
                 AdvanceConversation();
@@ -60,7 +74,7 @@ public class DialogDisplay : MonoBehaviour
 
     void AdvanceConversation()
     {
-        if (_activeLineIndex < conversation.lines.Length)
+        if (_activeLineIndex < _currentConversation.lines.Length)
         {
             DisplayLine();
             _activeLineIndex += 1;
@@ -70,7 +84,7 @@ public class DialogDisplay : MonoBehaviour
             _speakerUILeft.Hide();
             _speakerUIRight.Hide();
             _activeLineIndex = 0;
-            isActiveDialog = false;
+            _isActiveDialog = false;
 
             // TODO: Give item only if it is non-null
             player.inventory.AddItem(itemToGive);
@@ -87,7 +101,7 @@ public class DialogDisplay : MonoBehaviour
 
     void DisplayLine()
     {
-        Line line = conversation.lines[_activeLineIndex];
+        Line line = _currentConversation.lines[_activeLineIndex];
         Character character = line.character;
 
         if (_speakerUILeft.SpeakerIs(character))

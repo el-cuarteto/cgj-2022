@@ -272,14 +272,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d617d5d197a0b42b385415f8dff09f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: {fileID: 11400000, guid: 22da025d3318a4c67a97ac4b0c4c842a, type: 2}
+  conversations:
+  - {fileID: 11400000, guid: 22da025d3318a4c67a97ac4b0c4c842a, type: 2}
   dialog: {fileID: 208364971}
   player: {fileID: 29147160}
   itemToGive: {fileID: 11400000, guid: 27fa674eee1d4ac4ea64984eb29d20f1, type: 2}
   speakerLeft: {fileID: 1910720734}
   speakerRight: {fileID: 67611496}
   dialogPanel: {fileID: 1688613607}
-  isActiveDialog: 1
 --- !u!1 &208364969
 GameObject:
   m_ObjectHideFlags: 0

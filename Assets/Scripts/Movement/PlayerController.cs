@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private OpenCharacterController _controller = null;
 
     [SerializeField]
-    private Camera _mainCamera = null;
+    private Transform _mainCamera = null;
 
     [SerializeField]
     private LayerMask _collisionLayers = ~0;
@@ -56,23 +56,23 @@ public class PlayerController : MonoBehaviour
         Vector2 input = new Vector2(Input.GetAxisRaw("Mouse X") * _mouseXSensibility * _mouseXSpeed, 
             Input.GetAxisRaw("Mouse Y") * _mouseYSensibility * _mouseYSpeed);
 
-        Vector2 right = _mainCamera.transform.right;
+        Vector2 right = _mainCamera.right;
         right.y = 0f;
 
         Quaternion horizontalRotation = Quaternion.AngleAxis(input.x, Vector3.up);
-        _mainCamera.transform.rotation = horizontalRotation * _mainCamera.transform.rotation;
+        _mainCamera.rotation = horizontalRotation * _mainCamera.rotation;
 
-        Vector3 forward = _mainCamera.transform.forward;
+        Vector3 forward = _mainCamera.forward;
         forward.y = 0f;
 
-        float angle = Vector3.Angle(forward, _mainCamera.transform.forward);
+        float angle = Vector3.Angle(forward, _mainCamera.forward);
 
         if (angle >= _maxXAngle)
         {
-            bool up = _mainCamera.transform.forward.y > 0;
-            Vector3 angles = _mainCamera.transform.eulerAngles;
+            bool up = _mainCamera.forward.y > 0;
+            Vector3 angles = _mainCamera.eulerAngles;
             angles.x = (!up ? _maxXAngle - 0.25f : 360f - _maxXAngle + 0.25f);
-            _mainCamera.transform.eulerAngles = angles;
+            _mainCamera.eulerAngles = angles;
             return;
         }
 
@@ -82,17 +82,17 @@ public class PlayerController : MonoBehaviour
         else if (input.y < 0 && (angle - input.y) > _maxXAngle)
             input.y = Mathf.Sign(input.y) * ((_maxXAngle - angle) - 0.25f);
 
-        float ySign = (_mainCamera.transform.forward.z < 0 ? 1f : -1f);
+        float ySign = (_mainCamera.forward.z < 0 ? 1f : -1f);
         Quaternion verticalRotation = Quaternion.AngleAxis(ySign * input.y, right);
-        _mainCamera.transform.rotation = _mainCamera.transform.rotation * verticalRotation;
+        _mainCamera.rotation = _mainCamera.rotation * verticalRotation;
     }
 
 
     private void ManageKeyboardInput()
     {
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        Vector3 right = _mainCamera.transform.right * input.x;
-        Vector3 forward = _mainCamera.transform.forward * input.y;
+        Vector3 right = _mainCamera.right * input.x;
+        Vector3 forward = _mainCamera.forward * input.y;
 
         forward.y = right.y = 0f;
         right *= _sideSpeed;

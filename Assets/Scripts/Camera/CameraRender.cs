@@ -18,7 +18,6 @@ public class CameraRender : MonoBehaviour
 
     private int _screenWidth = -1;
     private int _screenHeight = -1;
-    private Rect _screenRect = new Rect();
 
     private void Awake()
     {
@@ -37,8 +36,6 @@ public class CameraRender : MonoBehaviour
 
         _screenWidth = Screen.width;
         _screenHeight = Screen.height;
-
-        _screenRect = new Rect(0, 0, _screenWidth, _screenHeight);
 
         RenderTextureDescriptor renderTextureDescriptor;
         if (_cameraOrigin.targetTexture != null)

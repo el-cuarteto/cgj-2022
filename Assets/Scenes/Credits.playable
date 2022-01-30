@@ -22,7 +22,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 4.916666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -493943193633839576}
     m_Duration: 1
@@ -88,7 +88,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 0
+    m_PreExtrapolationTime: 4.916666666666667
     m_DisplayName: FadeOut
   m_Markers:
     m_Objects: []
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 1
+    m_Start: 5.916666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -6418797209610843707}
     m_Duration: 3
@@ -235,7 +235,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PoetryClipAsset
   - m_Version: 1
-    m_Start: 5.0000000000000036
+    m_Start: 9.916666666666664
     m_ClipIn: 0
     m_Asset: {fileID: -1280031662426206886}
     m_Duration: 2.999999999999999
@@ -304,7 +304,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PoetryClipAsset
   - m_Version: 1
-    m_Start: 9.000000000000004
+    m_Start: 13.916666666666664
     m_ClipIn: 0
     m_Asset: {fileID: -8789641074009375851}
     m_Duration: 2.999999999999999
@@ -355,7 +355,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PoetryClipAsset
   - m_Version: 1
-    m_Start: 13.000000000000034
+    m_Start: 17.916666666666696
     m_ClipIn: 0
     m_Asset: {fileID: 9163973331739435377}
     m_Duration: 2.999999999999999
@@ -406,7 +406,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PoetryClipAsset
   - m_Version: 1
-    m_Start: 17
+    m_Start: 21.91666666666666
     m_ClipIn: 0
     m_Asset: {fileID: -2244660850710751074}
     m_Duration: 2.999999999999999
@@ -457,7 +457,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PoetryClipAsset
   - m_Version: 1
-    m_Start: 21
+    m_Start: 25.91666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 5041130452932399874}
     m_Duration: 2.999999999999999
@@ -508,7 +508,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: PoetryClipAsset
   - m_Version: 1
-    m_Start: 25
+    m_Start: 29.91666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 7395864334230169841}
     m_Duration: 2.999999999999999

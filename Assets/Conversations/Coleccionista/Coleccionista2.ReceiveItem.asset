@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7e6ac5793574bdeb04c990c9e3eac1, type: 3}
+  m_Name: Coleccionista2.ReceiveItem
+  m_EditorClassIdentifier: 
+  speakerLeft: {fileID: 11400000, guid: ff3752b00dcf8464ab20931430cf764d, type: 2}
+  speakerRight: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
+  lines:
+  - character: {fileID: 11400000, guid: ff3752b00dcf8464ab20931430cf764d, type: 2}
+    text: Wait... is that... what I think it is?
+  - character: {fileID: 11400000, guid: ff3752b00dcf8464ab20931430cf764d, type: 2}
+    text: A copy of the Necronomicon! Are you a wiz!?
+  - character: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
+    text: If you want it, this is yours!
+  - character: {fileID: 11400000, guid: ff3752b00dcf8464ab20931430cf764d, type: 2}
+    text: Thank you so much, my sadness this cures!

@@ -400,10 +400,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   conversations:
-  - {fileID: 11400000, guid: a169822e6a73f3740afbc49f8745d30a, type: 2}
-  - {fileID: 11400000, guid: f1e2d407cb2941546b1bc53856a6c511, type: 2}
-  - {fileID: 11400000, guid: 240fe0da5091caf429cd158a2af81eb4, type: 2}
-  - {fileID: 11400000, guid: f2216436e82035343b974ab05c784091, type: 2}
+  - {fileID: 11400000, guid: 1479c674b2c884c04a1e1b6dd79d3555, type: 2}
+  - {fileID: 11400000, guid: 1a7dce686a4974470a1b563a2b18d50f, type: 2}
   givesItem: 0
   itemToGive: {fileID: 11400000, guid: c0cc4822a5102cd4aaa9a5ba2924082c, type: 2}
   givesItemStep: 0

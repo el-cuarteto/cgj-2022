@@ -253,7 +253,7 @@ RectTransform:
   - {fileID: 1910720735}
   - {fileID: 67611497}
   m_Father: {fileID: 2048039823}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 7d8c2f141e1b3d24782abb211d434861, type: 2}
-  X_START: -240
+  X_START: -255
   Y_START: 0
   Z_START: 0
   ITEM_SIZE: 41
@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 886547687}
   - component: {fileID: 886547688}
   m_Layer: 5
-  m_Name: NPC
+  m_Name: Fan NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -866,12 +866,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886547686}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2048039823}
-  m_RootOrder: 1
+  m_Father: {fileID: 1154315334}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -892,12 +892,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 29147160}
   dialogDisplay: {fileID: 88787421}
+  keyCode: 101
   conversations:
   - {fileID: 11400000, guid: 8e4017186e63748a58e6b275819c6ad0, type: 2}
   - {fileID: 11400000, guid: b9e46293fd3f54e559df9a39709118ae, type: 2}
   - {fileID: 11400000, guid: a2cc4ffc935424356bf2c9cdc9760ec9, type: 2}
   givesItem: 1
-  itemToGive: {fileID: 11400000, guid: 27fa674eee1d4ac4ea64984eb29d20f1, type: 2}
+  itemToGive: {fileID: 11400000, guid: 6770d45ef86cac6459b889f366311110, type: 2}
   expectsItem: 0
   expectedItem: {fileID: 0}
 --- !u!1 &972040700
@@ -1068,6 +1069,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130749548}
   m_CullTransparentMesh: 1
+--- !u!1 &1131796925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1131796926}
+  - component: {fileID: 1131796927}
+  m_Layer: 5
+  m_Name: Lovecraft NPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1131796926
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131796925}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1154315334}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1131796927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131796925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92387fdd5005b44ed9649068b4ac5fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 29147160}
+  dialogDisplay: {fileID: 88787421}
+  keyCode: 102
+  conversations:
+  - {fileID: 11400000, guid: 8e4017186e63748a58e6b275819c6ad0, type: 2}
+  - {fileID: 11400000, guid: b9e46293fd3f54e559df9a39709118ae, type: 2}
+  - {fileID: 11400000, guid: a2cc4ffc935424356bf2c9cdc9760ec9, type: 2}
+  givesItem: 1
+  itemToGive: {fileID: 11400000, guid: c0cc4822a5102cd4aaa9a5ba2924082c, type: 2}
+  expectsItem: 1
+  expectedItem: {fileID: 11400000, guid: 6770d45ef86cac6459b889f366311110, type: 2}
+--- !u!1 &1154315333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1154315334}
+  m_Layer: 5
+  m_Name: NPCs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1154315334
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154315333}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 886547687}
+  - {fileID: 1131796926}
+  m_Father: {fileID: 2048039823}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1688613607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,8 +1460,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 220688342}
-  - {fileID: 886547687}
   - {fileID: 88787420}
+  - {fileID: 1154315334}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

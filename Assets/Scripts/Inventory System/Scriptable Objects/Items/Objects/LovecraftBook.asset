@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da4cd649d3b45e84fb77aec77120e0d4, type: 3}
-  m_Name: Bible
+  m_Script: {fileID: 11500000, guid: a925b285cdfe618499f1c3d75d7755b5, type: 3}
+  m_Name: LovecraftBook
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6492734685744207268, guid: d64bfcc89729dbb49a6ce40c35a1d5b9, type: 3}
-  type: 0
+  prefab: {fileID: 4226848128741042513, guid: 965778f7cf45dad43bb052942f32abb3, type: 3}
   description: 

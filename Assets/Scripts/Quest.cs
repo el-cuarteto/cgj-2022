@@ -10,6 +10,9 @@ public class Quest : MonoBehaviour
     // Reference to the DialogDisplay
     public DialogDisplay dialogDisplay;
 
+    // Just for development
+    public KeyCode keyCode;
+
     // Conversations that expect should have 4 entries:
     // 0: initial conversation
     // 1: quest not finished
@@ -24,15 +27,17 @@ public class Quest : MonoBehaviour
 
     public bool givesItem = false;
     public ItemObject itemToGive;
+    //public int givesItemStep;
 
     public bool expectsItem = false;
     public ItemObject expectedItem;
+    //public int expectsItemStep;
 
     void Update()
     {
         // TODO: falta verificar que estés en proximidad
         // con el character
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown(keyCode))
         {
             StartConversation();
         }

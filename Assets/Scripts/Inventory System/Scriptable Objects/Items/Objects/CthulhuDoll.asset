@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da4cd649d3b45e84fb77aec77120e0d4, type: 3}
-  m_Name: Call of Cthulhu
+  m_Script: {fileID: 11500000, guid: a925b285cdfe618499f1c3d75d7755b5, type: 3}
+  m_Name: CthulhuDoll
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1649355600738652541, guid: 406606f6a1c9c7f48bc495625dd8bc2b, type: 3}
-  type: 0
-  description: 
+  prefab: {fileID: 6862587587422293374, guid: 0e19c9de91345834db5cc9acfe050e61, type: 3}
+  description: A book about cosmic sea monsters.

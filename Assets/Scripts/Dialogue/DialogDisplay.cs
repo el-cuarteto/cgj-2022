@@ -16,7 +16,7 @@ public class DialogDisplay : MonoBehaviour
     private SpeakerUI _speakerUIRight;
 
     private int _activeLineIndex = 0;
-    private bool _isActiveDialog = true;
+    private bool _isActiveDialog = false;
     private Conversation _currentConversation;
     public Conversation conversation {
         set {
@@ -66,6 +66,8 @@ public class DialogDisplay : MonoBehaviour
 
     void AdvanceConversation()
     {
+        if (!_isActiveDialog) return;
+
         if (_activeLineIndex < _currentConversation.lines.Length)
         {
             DisplayLine();
@@ -84,8 +86,8 @@ public class DialogDisplay : MonoBehaviour
 
     void HideDialogPanel()
     {
-        Dialog = "";
         dialogPanel.SetActive(false);
+        Dialog = "";
     }
 
     public void ShowDialogPanel()

@@ -6,8 +6,8 @@ using System.Collections.Generic;
 
 public class DialogDisplay : MonoBehaviour
 {
-    UnityEvent onConversationStart = new UnityEvent();
-    UnityEvent onConversationEnd = new UnityEvent();
+    public UnityEvent onConversationStart = new UnityEvent();
+    public UnityEvent onConversationEnd = new UnityEvent();
 
     public Text dialog;
     private IEnumerator _activeCoroutine;

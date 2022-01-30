@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class DialogDisplay : MonoBehaviour
 {
     public Text dialog;
+    private IEnumerator _activeCoroutine;
 
     public GameObject speakerLeft;
     public GameObject speakerRight;
@@ -51,6 +52,7 @@ public class DialogDisplay : MonoBehaviour
     {
         if (Input.GetKeyDown(_keyToPress))
         {
+            StopCoroutine(_activeCoroutine);
             if (_isActiveDialog)
             {
                 AdvanceConversation();
@@ -101,12 +103,13 @@ public class DialogDisplay : MonoBehaviour
 
         if (_speakerUILeft.SpeakerIs(character))
         {
-            StartCoroutine(SetDialog(_speakerUILeft, _speakerUIRight, line.text));
+            _activeCoroutine = SetDialog(_speakerUILeft, _speakerUIRight, line.text);
         }
         else
         {
-            StartCoroutine(SetDialog(_speakerUIRight, _speakerUILeft, line.text));
+            _activeCoroutine = SetDialog(_speakerUIRight, _speakerUILeft, line.text);
         }
+        StartCoroutine(_activeCoroutine);
     }
 
     IEnumerator SetDialog(

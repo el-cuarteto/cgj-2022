@@ -394,7 +394,7 @@ MonoBehaviour:
   givesItemStep: 0
   expectsItem: 1
   expectedItem: {fileID: 11400000, guid: 6770d45ef86cac6459b889f366311110, type: 2}
-  expectsItemStep: 0
+  expectsItemStep: 1
 --- !u!1 &350163989 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2684073072015344962, guid: eb8646b9d3c3b424ab3b0c1a5383ff36, type: 3}
@@ -1751,10 +1751,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f2216436e82035343b974ab05c784091, type: 2}
   givesItem: 1
   itemToGive: {fileID: 11400000, guid: c0cc4822a5102cd4aaa9a5ba2924082c, type: 2}
-  givesItemStep: 0
+  givesItemStep: 2
   expectsItem: 1
   expectedItem: {fileID: 11400000, guid: 6770d45ef86cac6459b889f366311110, type: 2}
-  expectsItemStep: 0
+  expectsItemStep: 1
 --- !u!1 &1697811819
 GameObject:
   m_ObjectHideFlags: 0

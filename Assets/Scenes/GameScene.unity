@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2345,18 +2345,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DualController, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7704,6 +7692,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6498925113961518498, guid: 8afed61c758b34e4f843c8cf6b54d5bf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 11.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498925113961518498, guid: 8afed61c758b34e4f843c8cf6b54d5bf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498925113961518498, guid: 8afed61c758b34e4f843c8cf6b54d5bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6498925113961518498, guid: 8afed61c758b34e4f843c8cf6b54d5bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.09
+      objectReference: {fileID: 0}
     - target: {fileID: 9002666741635376655, guid: 8afed61c758b34e4f843c8cf6b54d5bf, type: 3}
       propertyPath: m_PlaneDistance
       value: 4
@@ -7727,10 +7731,6 @@ PrefabInstance:
     - target: {fileID: 9002666743123488365, guid: 8afed61c758b34e4f843c8cf6b54d5bf, type: 3}
       propertyPath: m_ReferenceResolution.y
       value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 9002666743344318846, guid: 8afed61c758b34e4f843c8cf6b54d5bf, type: 3}
-      propertyPath: _isInputActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9002666743426154247, guid: 8afed61c758b34e4f843c8cf6b54d5bf, type: 3}
       propertyPath: m_TargetTexture

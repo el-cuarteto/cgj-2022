@@ -467,8 +467,9 @@ MonoBehaviour:
   player: {fileID: 823590567}
   dialogDisplay: {fileID: 2082735588}
   conversations:
-  - {fileID: 11400000, guid: 8e4017186e63748a58e6b275819c6ad0, type: 2}
-  - {fileID: 11400000, guid: a2cc4ffc935424356bf2c9cdc9760ec9, type: 2}
+  - {fileID: 11400000, guid: 117a42eea8c4b4ae0a8bc2818ef8714d, type: 2}
+  - {fileID: 11400000, guid: a65ca75a3745a4f2f98f49814a025aff, type: 2}
+  - {fileID: 11400000, guid: 508f21527b17e44898c71154569d06f3, type: 2}
   givesItem: 1
   itemToGive: {fileID: 11400000, guid: 6770d45ef86cac6459b889f366311110, type: 2}
   givesItemStep: 1

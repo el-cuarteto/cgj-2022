@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92387fdd5005b44ed9649068b4ac5fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcObject: {fileID: 796519666}
+  npcObject: {fileID: 598475994}
   playerObject: {fileID: 1746179217}
   dualCamera: {fileID: 1660619000}
   player: {fileID: 823590567}
@@ -946,6 +946,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584910348}
   m_CullTransparentMesh: 1
+--- !u!1 &598475994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1504336452775922872, guid: eb8646b9d3c3b424ab3b0c1a5383ff36, type: 3}
+  m_PrefabInstance: {fileID: 1959408579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &607662073
 GameObject:
   m_ObjectHideFlags: 0

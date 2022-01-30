@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1772,10 +1772,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   conversations:
-  - {fileID: 11400000, guid: a169822e6a73f3740afbc49f8745d30a, type: 2}
-  - {fileID: 11400000, guid: f1e2d407cb2941546b1bc53856a6c511, type: 2}
-  - {fileID: 11400000, guid: 240fe0da5091caf429cd158a2af81eb4, type: 2}
-  - {fileID: 11400000, guid: f2216436e82035343b974ab05c784091, type: 2}
+  - {fileID: 11400000, guid: ddb704c086ca54e10b746d5baa114c9a, type: 2}
+  - {fileID: 11400000, guid: cd7a374663af746e3a11cbb87f86d209, type: 2}
+  - {fileID: 11400000, guid: 967bb6612ecc34361ae8ded39df47c8e, type: 2}
+  - {fileID: 11400000, guid: 7da2d2cbb9ce741d7adb4118276f1a4a, type: 2}
   givesItem: 1
   itemToGive: {fileID: 11400000, guid: c0cc4822a5102cd4aaa9a5ba2924082c, type: 2}
   givesItemStep: 2

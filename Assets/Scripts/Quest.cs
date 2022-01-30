@@ -9,6 +9,7 @@ public class Quest : MonoBehaviour
 
     // Reference to the player game object (3D character)
     public GameObject playerObject;
+    public GameObject dualCamera;
 
     // Reference to the player and its inventory
     public PlayerWithInventory player;
@@ -47,9 +48,11 @@ public class Quest : MonoBehaviour
 
     void Update()
     {
-        float distance = Vector3.Distance(npcObject.transform.position, playerObject.transform.position);
+        float playerDistance = Vector3.Distance(npcObject.transform.position, playerObject.transform.position);
+        float dualDistance = Vector3.Distance(npcObject.transform.position, dualCamera.transform.position);
 
-        if (distance < _distanceThreshold && Input.GetKeyDown(_keyCode))
+        if ((playerDistance < _distanceThreshold || dualDistance < _distanceThreshold) && 
+            Input.GetKeyDown(_keyCode))
         {
             StartConversation();
         }

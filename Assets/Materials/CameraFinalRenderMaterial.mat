@@ -51,6 +51,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: ea04ab09ee9c79a45adc6da36183b564, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Layout1:
+        m_Texture: {fileID: 2800000, guid: ea04ab09ee9c79a45adc6da36183b564, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Layout2:
+        m_Texture: {fileID: 2800000, guid: ff29d656e5e238f4ab336172b41df636, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -61,6 +69,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Mix:
         m_Texture: {fileID: 2800000, guid: 700632e6c41775b4186579d01ca7de54, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mix1:
+        m_Texture: {fileID: 2800000, guid: 700632e6c41775b4186579d01ca7de54, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mix2:
+        m_Texture: {fileID: 2800000, guid: 4fd7f148d8aae444f8eb32f474bfd6f0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -79,6 +95,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _LayoutMixValue: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1

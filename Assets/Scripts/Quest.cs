@@ -24,14 +24,20 @@ public class Quest : MonoBehaviour
     // 2: quest succeeded
     public List<Conversation> conversations = new List<Conversation>();
     private int _currentConversationIndex = 0;
+    private int _previousConversationIndex = 0;
 
     public bool givesItem = false;
     public ItemObject itemToGive;
-    //public int givesItemStep;
+    public int givesItemStep;
 
     public bool expectsItem = false;
     public ItemObject expectedItem;
-    //public int expectsItemStep;
+    public int expectsItemStep;
+
+    private void Start()
+    {
+        dialogDisplay.endOfDialogueAction = ContinueConversation;
+    }
 
     void Update()
     {
@@ -43,41 +49,77 @@ public class Quest : MonoBehaviour
         }
     }
 
+    //else if (expectsItem && _currentConversationIndex == expectsItemStep)
+    //{
+    //if 
+    /* if (expectsItem && player.inventory.HasItem(expectedItem))
+     {
+         _currentConversationIndex = 2;
+     }
+
+     // will show 1 or 2
+     ShowConversation();
+
+     if (givesItem)
+     {
+         player.inventory.AddItem(itemToGive);
+         _currentConversationIndex = 2;
+     }
+
+     if (expectsItem && _currentConversationIndex == 2)
+     {
+         _currentConversationIndex = 3;
+     }*/
+    //}
+
+    private void increaseConversationIndex()
+    {
+        _currentConversationIndex = Mathf.Min(_currentConversationIndex + 1, conversations.Count-1);
+    }
+
+    private bool isTakingItem()
+    {
+        return expectsItem && _currentConversationIndex == expectsItemStep && player.inventory.HasItem(expectedItem);
+    }
+
+    private bool isGivingItem()
+    {
+        return givesItem && _currentConversationIndex == givesItemStep;
+    }
+
     void StartConversation()
     {
+        ShowConversation();
+        _previousConversationIndex = _currentConversationIndex;
         if (_currentConversationIndex == 0)
         {
-            ShowConversation();
-            _currentConversationIndex = 1;
-        } else if (_currentConversationIndex == 1)
-        {
-            if (expectsItem && player.inventory.HasItem(expectedItem))
-            {
-                _currentConversationIndex = 2;
-            }
-
-            // will show 1 or 2
-            ShowConversation();
-
-            if (givesItem)
-            {
-                player.inventory.AddItem(itemToGive);
-                _currentConversationIndex = 2;
-            }
-
-            if (expectsItem && _currentConversationIndex == 2)
-            {
-                _currentConversationIndex = 3;
-            }
+            increaseConversationIndex();
         }
-        else
+        else if (isTakingItem())
         {
-            ShowConversation();
+            increaseConversationIndex();
+            player.inventory.RemoveItem(expectedItem);
+        }
+        else if (isGivingItem())
+        {
+            increaseConversationIndex();
+            player.inventory.AddItem(itemToGive);
+        }
+    }
+
+    private void ContinueConversation()
+    {
+        if (_previousConversationIndex != _currentConversationIndex && (isTakingItem() || isGivingItem()))
+        {
+            StartConversation();
         }
     }
 
     void ShowConversation()
     {
+        // We have to assign the action again so that it can evaluate new values of the fields
+        dialogDisplay.endOfDialogueAction = ContinueConversation;
+
         dialogDisplay.conversation = conversations[_currentConversationIndex];
         dialogDisplay.ShowDialogPanel();
     }

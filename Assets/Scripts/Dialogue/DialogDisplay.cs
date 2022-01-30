@@ -17,6 +17,10 @@ public class DialogDisplay : MonoBehaviour
 
     private int _activeLineIndex = 0;
     private bool _isActiveDialog = false;
+
+    // This is an action provided by the quest
+    public System.Action endOfDialogueAction;
+
     private Conversation _currentConversation;
     public Conversation conversation {
         set {
@@ -64,6 +68,7 @@ public class DialogDisplay : MonoBehaviour
         }
     }
 
+
     void AdvanceConversation()
     {
         if (!_isActiveDialog) return;
@@ -75,12 +80,20 @@ public class DialogDisplay : MonoBehaviour
         }
         else
         {
-            _speakerUILeft.Hide();
-            _speakerUIRight.Hide();
-            _activeLineIndex = 0;
             _isActiveDialog = false;
+            if (endOfDialogueAction != null)
+            {
+                endOfDialogueAction();
+            }
 
-            HideDialogPanel();
+            // It can be activated in the endOfDialogueAction (the dialogue continues)
+            if (!_isActiveDialog)
+            {
+                _speakerUILeft.Hide();
+                _speakerUIRight.Hide();
+                _activeLineIndex = 0;
+                HideDialogPanel();
+            }
         }
     }
 
@@ -95,6 +108,7 @@ public class DialogDisplay : MonoBehaviour
         dialogPanel.SetActive(true);
         AdvanceConversation();
     }
+
 
     void DisplayLine()
     {

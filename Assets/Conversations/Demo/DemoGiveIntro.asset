@@ -16,8 +16,10 @@ MonoBehaviour:
   speakerRight: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
   lines:
   - character: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
-    text: Hola esta es una prueba
+    text: "Hola. Soy un fan\xE1tico de prueba de HP Lovecraft."
   - character: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
-    text: OK
+    text: "OK. Yo tambi\xE9n soy de prueba. Creo que soy el protagonista de este
+      demo."
   - character: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
-    text: Hablame de nuevo pa darte alguito
+    text: "Ah fijate t\xFA! Pues toma este mu\xF1eco de una bestia marina totalmente
+      inofensivo"

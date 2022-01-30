@@ -895,12 +895,13 @@ MonoBehaviour:
   keyCode: 101
   conversations:
   - {fileID: 11400000, guid: 8e4017186e63748a58e6b275819c6ad0, type: 2}
-  - {fileID: 11400000, guid: b9e46293fd3f54e559df9a39709118ae, type: 2}
   - {fileID: 11400000, guid: a2cc4ffc935424356bf2c9cdc9760ec9, type: 2}
   givesItem: 1
   itemToGive: {fileID: 11400000, guid: 6770d45ef86cac6459b889f366311110, type: 2}
+  givesItemStep: 1
   expectsItem: 0
   expectedItem: {fileID: 0}
+  expectsItemStep: 0
 --- !u!1 &972040700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,8 +1127,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2cc4ffc935424356bf2c9cdc9760ec9, type: 2}
   givesItem: 1
   itemToGive: {fileID: 11400000, guid: c0cc4822a5102cd4aaa9a5ba2924082c, type: 2}
+  givesItemStep: 0
   expectsItem: 1
   expectedItem: {fileID: 11400000, guid: 6770d45ef86cac6459b889f366311110, type: 2}
+  expectsItemStep: 0
 --- !u!1 &1154315333
 GameObject:
   m_ObjectHideFlags: 0

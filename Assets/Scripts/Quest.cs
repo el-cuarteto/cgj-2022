@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class Quest : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Quest : MonoBehaviour
     public DialogDisplay dialogDisplay;
 
     private KeyCode _keyCode = KeyCode.E;
+
+    public UnityEvent onQuestFinishes = new UnityEvent();
 
     // Conversations that expect should have 4 entries:
     // 0: initial conversation
@@ -85,6 +88,11 @@ public class Quest : MonoBehaviour
         {
             increaseConversationIndex();
             player.inventory.RemoveItem(expectedItem);
+            if (expectedItem.name == "LovecraftBook" && onQuestFinishes != null)
+            {
+                Debug.Log("EL QUEST TERMINÓ");
+                onQuestFinishes.Invoke();
+            }
         }
         else if (isGivingItem())
         {

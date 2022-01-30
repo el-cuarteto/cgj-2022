@@ -221,11 +221,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.599998, y: 19.199999, z: 12.599998}
   m_Center: {x: 0, y: 9.599999, z: 0}
---- !u!1 &241506757 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1504336452775922872, guid: eb8646b9d3c3b424ab3b0c1a5383ff36, type: 3}
-  m_PrefabInstance: {fileID: 1959408579}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &270544510
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcObject: {fileID: 149416579}
   playerObject: {fileID: 1746179217}
+  dualCamera: {fileID: 1486573048}
   player: {fileID: 823590567}
   dialogDisplay: {fileID: 2082735588}
   conversations:
@@ -1112,6 +1108,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 24.6, y: 13.199998, z: 14.518368}
   m_Center: {x: 0, y: 6.599999, z: -0.95918465}
+--- !u!1 &796519666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1647423934526526766, guid: 28228e979444d7449886c7ede8b9e539, type: 3}
+  m_PrefabInstance: {fileID: 1023308626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &803634755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,6 +1261,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1647423934526526766, guid: 28228e979444d7449886c7ede8b9e539, type: 3}
+      propertyPath: m_Name
+      value: Lovecraft
+      objectReference: {fileID: 0}
     - target: {fileID: 1881865308249813623, guid: 28228e979444d7449886c7ede8b9e539, type: 3}
       propertyPath: m_Name
       value: Past
@@ -1580,6 +1585,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.599998, y: 25.199997, z: 12.599998}
   m_Center: {x: 0, y: 12.599998, z: 0}
+--- !u!1 &1486573048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9002666743426154245, guid: 8afed61c758b34e4f843c8cf6b54d5bf, type: 3}
+  m_PrefabInstance: {fileID: 9002666741860956157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1522091095 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1504336454011866794, guid: eb8646b9d3c3b424ab3b0c1a5383ff36, type: 3}
@@ -1646,14 +1656,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92387fdd5005b44ed9649068b4ac5fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcObject: {fileID: 241506757}
+  npcObject: {fileID: 796519666}
   playerObject: {fileID: 1746179217}
+  dualCamera: {fileID: 1486573048}
   player: {fileID: 823590567}
   dialogDisplay: {fileID: 2082735588}
   conversations:
-  - {fileID: 11400000, guid: 8e4017186e63748a58e6b275819c6ad0, type: 2}
-  - {fileID: 11400000, guid: b9e46293fd3f54e559df9a39709118ae, type: 2}
-  - {fileID: 11400000, guid: a2cc4ffc935424356bf2c9cdc9760ec9, type: 2}
+  - {fileID: 11400000, guid: a169822e6a73f3740afbc49f8745d30a, type: 2}
+  - {fileID: 11400000, guid: f1e2d407cb2941546b1bc53856a6c511, type: 2}
+  - {fileID: 11400000, guid: 240fe0da5091caf429cd158a2af81eb4, type: 2}
+  - {fileID: 11400000, guid: f2216436e82035343b974ab05c784091, type: 2}
   givesItem: 1
   itemToGive: {fileID: 11400000, guid: c0cc4822a5102cd4aaa9a5ba2924082c, type: 2}
   givesItemStep: 0

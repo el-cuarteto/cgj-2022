@@ -310,8 +310,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -104.94, y: -15}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 35, y: -20}
+  m_SizeDelta: {x: 460, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &208364971
 MonoBehaviour:
@@ -893,7 +893,9 @@ MonoBehaviour:
   player: {fileID: 29147160}
   dialogDisplay: {fileID: 88787421}
   conversations:
-  - {fileID: 11400000, guid: 22da025d3318a4c67a97ac4b0c4c842a, type: 2}
+  - {fileID: 11400000, guid: 8e4017186e63748a58e6b275819c6ad0, type: 2}
+  - {fileID: 11400000, guid: b9e46293fd3f54e559df9a39709118ae, type: 2}
+  - {fileID: 11400000, guid: a2cc4ffc935424356bf2c9cdc9760ec9, type: 2}
   givesItem: 1
   itemToGive: {fileID: 11400000, guid: 27fa674eee1d4ac4ea64984eb29d20f1, type: 2}
   expectsItem: 0

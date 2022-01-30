@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DualController : MonoBehaviour
 {
@@ -21,6 +22,21 @@ public class DualController : MonoBehaviour
     [SerializeField]
     private float _swapTime = 0.3f;
 
+    [SerializeField]
+    private bool _isInputActive = true;
+
+    public static bool IsInputActive { get { return instance._isInputActive; } set { instance._isInputActive = value; } }
+
+    [SerializeField]
+    private UnityEvent _onMainActivated;
+
+    public static UnityEvent OnMainActivated => instance._onMainActivated;
+
+    [SerializeField]
+    private UnityEvent _onDualActivated;
+
+    public static UnityEvent OnDualActivated => instance._onDualActivated;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -40,20 +56,26 @@ public class DualController : MonoBehaviour
         DualMixer.ChangeMix(_mainMix, 0);
     }
 
-
     private void Update()
     {
+        if (!_isInputActive)
+        {
+            return;
+        }
+
         if (Input.GetButtonDown(_dualButton))
         {
             if (_mainEnabled)
             {
                 DualMixer.ChangeMix(_dualMix, _swapTime);
                 _mainEnabled = false;
+                _onDualActivated.Invoke();
             }
             else
             {
                 DualMixer.ChangeMix(_mainMix, _swapTime);
                 _mainEnabled = true;
+                _onMainActivated.Invoke();
             }
         }
     }

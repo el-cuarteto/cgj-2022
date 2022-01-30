@@ -33,6 +33,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float _maxXAngle = 70f;
 
+    [SerializeField]
+    private bool _enabled = true;
+
     private void Awake()
     {
         _controller = GetComponent<OpenCharacterController>();
@@ -46,8 +49,23 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (!_enabled)
+            return;
+
         ManageMouseInput();
         ManageKeyboardInput();
+    }
+
+
+    public void DisableInput()
+    {
+        _enabled = false;
+    }
+
+
+    public void EnableInput()
+    {
+        _enabled = true;
     }
 
 

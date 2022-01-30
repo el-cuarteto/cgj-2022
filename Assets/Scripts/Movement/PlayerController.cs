@@ -95,6 +95,9 @@ public class PlayerController : MonoBehaviour
         Vector3 forward = _mainCamera.forward * input.y;
 
         forward.y = right.y = 0f;
+        forward.Normalize();
+        right.Normalize();
+
         right *= _sideSpeed;
         forward *= _forwardSpeed;
 

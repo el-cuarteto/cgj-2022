@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7e6ac5793574bdeb04c990c9e3eac1, type: 3}
+  m_Name: DemoTakeGive
+  m_EditorClassIdentifier: 
+  speakerLeft: {fileID: 11400000, guid: 5657adf37fa51e945a52c807f316ee7d, type: 2}
+  speakerRight: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
+  lines:
+  - character: {fileID: 11400000, guid: 5657adf37fa51e945a52c807f316ee7d, type: 2}
+    text: "Muchas gracias! esta recreaci\xF3n del futuro de uno de mis personajes
+      demuestra que s\xED trascend\xED! "
+  - character: {fileID: 11400000, guid: 5657adf37fa51e945a52c807f316ee7d, type: 2}
+    text: "Aunque no estoy seguro de qu\xE9 tan sint\xE9tica es esta figura..."
+  - character: {fileID: 11400000, guid: 5657adf37fa51e945a52c807f316ee7d, type: 2}
+    text: "Espero que los manuscritos que te d\xED demuestren mi gratitud"

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7e6ac5793574bdeb04c990c9e3eac1, type: 3}
+  m_Name: Demo
+  m_EditorClassIdentifier: 
+  conversationId: Demo
+  speakerLeft: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
+  speakerRight: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
+  lines:
+  - character: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
+    text: 'This is a test!
+
+'
+  - character: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
+    text: Second line of the test
+  - character: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
+    text: Oh thank you!
+  - character: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
+    text: You're welcome, dude!
+  - character: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
+    text: Estoy pidiendo delivery
+  - character: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
+    text: Tengo hambre
+  - character: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
+    text: 'Buen provecho. '
+  - character: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
+    text: Toma este cuadrado

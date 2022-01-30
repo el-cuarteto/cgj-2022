@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7e6ac5793574bdeb04c990c9e3eac1, type: 3}
+  m_Name: DemoGiveIntro
+  m_EditorClassIdentifier: 
+  speakerLeft: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
+  speakerRight: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
+  lines:
+  - character: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
+    text: "Hola. Soy un fan\xE1tico de prueba de HP Lovecraft."
+  - character: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
+    text: "OK. Yo tambi\xE9n soy de prueba. Creo que soy el protagonista de este
+      demo."
+  - character: {fileID: 11400000, guid: b6cacadcbae68400db35ac2df93840be, type: 2}
+    text: "Ah fijate t\xFA! Pues toma este mu\xF1eco de una bestia marina totalmente
+      inofensivo"

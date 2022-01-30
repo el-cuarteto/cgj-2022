@@ -49,29 +49,6 @@ public class Quest : MonoBehaviour
         }
     }
 
-    //else if (expectsItem && _currentConversationIndex == expectsItemStep)
-    //{
-    //if 
-    /* if (expectsItem && player.inventory.HasItem(expectedItem))
-     {
-         _currentConversationIndex = 2;
-     }
-
-     // will show 1 or 2
-     ShowConversation();
-
-     if (givesItem)
-     {
-         player.inventory.AddItem(itemToGive);
-         _currentConversationIndex = 2;
-     }
-
-     if (expectsItem && _currentConversationIndex == 2)
-     {
-         _currentConversationIndex = 3;
-     }*/
-    //}
-
     private void increaseConversationIndex()
     {
         _currentConversationIndex = Mathf.Min(_currentConversationIndex + 1, conversations.Count-1);

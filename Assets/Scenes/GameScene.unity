@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -331,6 +331,70 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &335823582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335823583}
+  - component: {fileID: 335823584}
+  m_Layer: 5
+  m_Name: Coleccionist NPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &335823583
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335823582}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 633757804}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &335823584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335823582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92387fdd5005b44ed9649068b4ac5fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcObject: {fileID: 598475994}
+  playerObject: {fileID: 1746179217}
+  dualCamera: {fileID: 1660619000}
+  player: {fileID: 823590567}
+  dialogDisplay: {fileID: 2082735588}
+  conversations:
+  - {fileID: 11400000, guid: a169822e6a73f3740afbc49f8745d30a, type: 2}
+  - {fileID: 11400000, guid: f1e2d407cb2941546b1bc53856a6c511, type: 2}
+  - {fileID: 11400000, guid: 240fe0da5091caf429cd158a2af81eb4, type: 2}
+  - {fileID: 11400000, guid: f2216436e82035343b974ab05c784091, type: 2}
+  givesItem: 0
+  itemToGive: {fileID: 11400000, guid: c0cc4822a5102cd4aaa9a5ba2924082c, type: 2}
+  givesItemStep: 0
+  expectsItem: 1
+  expectedItem: {fileID: 11400000, guid: c0cc4822a5102cd4aaa9a5ba2924082c, type: 2}
+  expectsItemStep: 1
 --- !u!1 &350163989 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2684073072015344962, guid: eb8646b9d3c3b424ab3b0c1a5383ff36, type: 3}
@@ -882,6 +946,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584910348}
   m_CullTransparentMesh: 1
+--- !u!1 &598475994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1504336452775922872, guid: eb8646b9d3c3b424ab3b0c1a5383ff36, type: 3}
+  m_PrefabInstance: {fileID: 1959408579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &607662073
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,6 +1033,7 @@ RectTransform:
   m_Children:
   - {fileID: 356267885}
   - {fileID: 1686656411}
+  - {fileID: 335823583}
   m_Father: {fileID: 1697811823}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1686,10 +1756,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f2216436e82035343b974ab05c784091, type: 2}
   givesItem: 1
   itemToGive: {fileID: 11400000, guid: c0cc4822a5102cd4aaa9a5ba2924082c, type: 2}
-  givesItemStep: 0
+  givesItemStep: 2
   expectsItem: 1
   expectedItem: {fileID: 11400000, guid: 6770d45ef86cac6459b889f366311110, type: 2}
-  expectsItemStep: 0
+  expectsItemStep: 1
 --- !u!1 &1697811819
 GameObject:
   m_ObjectHideFlags: 0

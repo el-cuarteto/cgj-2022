@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7e6ac5793574bdeb04c990c9e3eac1, type: 3}
   m_Name: DemoTakeIntro
   m_EditorClassIdentifier: 
-  speakerLeft: {fileID: 0}
-  speakerRight: {fileID: 0}
-  lines: []
+  speakerLeft: {fileID: 11400000, guid: 5657adf37fa51e945a52c807f316ee7d, type: 2}
+  speakerRight: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
+  lines:
+  - character: {fileID: 11400000, guid: 5657adf37fa51e945a52c807f316ee7d, type: 2}
+    text: Hola soy Lovecraft
+  - character: {fileID: 11400000, guid: 98cfa7011a3ce45ef8fac95b8eef7b0d, type: 2}
+    text: Hola
+  - character: {fileID: 11400000, guid: 5657adf37fa51e945a52c807f316ee7d, type: 2}
+    text: "Dame algo que demuestre que trascend\xED"

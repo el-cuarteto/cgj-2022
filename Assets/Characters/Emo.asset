@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Emo
   m_EditorClassIdentifier: 
   displayName: John
-  portrait: {fileID: 21300000, guid: ce4ecb49423d3463d864f6aa6842eebe, type: 3}
+  portrait: {fileID: 21300000, guid: 812f3e6ec60544f36bcfcdf654014bfe, type: 3}

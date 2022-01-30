@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 public class DialogDisplay : MonoBehaviour
 {
-    // TODO: Quitar ultima ventana vacía
     public Text dialog;
 
     public GameObject speakerLeft;
@@ -55,7 +54,6 @@ public class DialogDisplay : MonoBehaviour
             if (_isActiveDialog)
             {
                 AdvanceConversation();
-                dialogPanel.SetActive(true);
             }
             else
             {

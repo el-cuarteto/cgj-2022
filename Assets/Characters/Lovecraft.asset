@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Lovecraft
   m_EditorClassIdentifier: 
   displayName: Lovecraft
-  portrait: {fileID: 21300000, guid: 08b2207e8239241e68ce5f93b6e4cd15, type: 3}
+  portrait: {fileID: 21300000, guid: bade55c11212b4e7695432a2307bc656, type: 3}

@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
 public class DialogDisplay : MonoBehaviour
 {
+    UnityEvent onConversationStart = new UnityEvent();
+    UnityEvent onConversationEnd = new UnityEvent();
+
     public Text dialog;
     private IEnumerator _activeCoroutine;
 
@@ -56,7 +60,10 @@ public class DialogDisplay : MonoBehaviour
     {
         if (Input.GetKeyDown(_keyToPress))
         {
-            StopCoroutine(_activeCoroutine);
+            if (_activeCoroutine != null) {
+                StopCoroutine(_activeCoroutine);
+            }
+
             if (_isActiveDialog)
             {
                 AdvanceConversation();
@@ -100,12 +107,14 @@ public class DialogDisplay : MonoBehaviour
     void HideDialogPanel()
     {
         dialogPanel.SetActive(false);
+        onConversationEnd.Invoke();
         Dialog = "";
     }
 
     public void ShowDialogPanel()
     {
         dialogPanel.SetActive(true);
+        onConversationStart.Invoke();
         AdvanceConversation();
     }
 

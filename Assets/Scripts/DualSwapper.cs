@@ -8,13 +8,20 @@ public class DualSwapper : MonoBehaviour
     private DualSerializedObject _mix;
 
     [SerializeField]
-    private float _seconds = 1;
+    private bool isMainMix = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            DualMixer.ChangeMix(_mix, _seconds);
+            if (!isMainMix)
+            {
+                DualController.ChangeDualMix(_mix);
+            }
+            else
+            {
+                DualController.ChangeMainMix(_mix);
+            }
         }
     }
 }

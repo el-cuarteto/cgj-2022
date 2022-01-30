@@ -74,23 +74,31 @@ public class DualMixer : MonoBehaviour
         _finalCameraRenderMat.SetTexture("_Mix2", job.mix.Mix);
         _finalCameraRenderMat.SetTexture("_Layout2", job.mix.Layout);
 
-        float startTime = Time.time;
-        yield return null;
-        while (true)
+        if (job.seconds <= 0)
         {
-            float percent = (Time.time - startTime) / job.seconds;
-            _finalCameraRenderMat.SetFloat("_LayoutMixValue", percent);
-
-            if (percent >= 1)
-            {
-                break;
-            }
-
+            _finalCameraRenderMat.SetFloat("_LayoutMixValue", 1);
             yield return null;
         }
+        else
+        {
+            float startTime = Time.time;
+            yield return null;
+            while (true)
+            {
+                float percent = (Time.time - startTime) / job.seconds;
+                _finalCameraRenderMat.SetFloat("_LayoutMixValue", percent);
 
-        _finalCameraRenderMat.SetFloat("_LayoutMixValue", 1);
-        yield return null;
+                if (percent >= 1)
+                {
+                    break;
+                }
+
+                yield return null;
+            }
+
+            _finalCameraRenderMat.SetFloat("_LayoutMixValue", 1);
+            yield return null;
+        }
 
         if (extraJob != null)
         {

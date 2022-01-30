@@ -7,6 +7,7 @@ public class PoetryClipAsset : PlayableAsset
 {
     public float easeInTime = 0.25f;
     public float easeOutTime = 0.25f;
+    [TextArea]
     public string poetryText = "";
 
     public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)

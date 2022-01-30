@@ -75,6 +75,10 @@ public class DialogDisplay : MonoBehaviour
         }
     }
 
+    public bool isActiveDialog()
+    {
+        return _isActiveDialog;
+    }
 
     void AdvanceConversation()
     {

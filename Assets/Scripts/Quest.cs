@@ -55,7 +55,7 @@ public class Quest : MonoBehaviour
         float dualDistance = Vector3.Distance(npcObject.transform.position, dualCamera.transform.position);
 
         if ((playerDistance < _distanceThreshold || dualDistance < _distanceThreshold) && 
-            Input.GetKeyDown(_keyCode))
+            Input.GetKeyDown(_keyCode) && !dialogDisplay.isActiveDialog())
         {
             StartConversation();
         }

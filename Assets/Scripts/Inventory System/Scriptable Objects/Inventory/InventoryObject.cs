@@ -11,6 +11,10 @@ public class InventoryObject : ScriptableObject
 
     public void AddItem(ItemObject item)
     {
+        if (HasItem(item)) {
+            return;
+        }
+
         itemsDict.Add(item.name, item);
 
         var builder = new StringBuilder();

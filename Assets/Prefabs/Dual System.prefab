@@ -5457,6 +5457,7 @@ GameObject:
   - component: {fileID: 9002666743344318844}
   - component: {fileID: 9002666743344318845}
   - component: {fileID: 9002666743344318846}
+  - component: {fileID: 588706233016892046}
   m_Layer: 0
   m_Name: Systems
   m_TagString: Untagged
@@ -5521,6 +5522,26 @@ MonoBehaviour:
   _mainMix: {fileID: 11400000, guid: 8dc3f674a55956540a2c8574103300fe, type: 2}
   _dualMix: {fileID: 11400000, guid: 376e4020978f00f46b9b07c3766cb2d4, type: 2}
   _swapTime: 0.3
+  _isInputActive: 1
+  _onMainActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  _onDualActivated:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &588706233016892046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9002666743344318850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ece72b4a322d0d4eb44ff9ed2e17477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cancelName: Cancel
 --- !u!1 &9002666743426154245
 GameObject:
   m_ObjectHideFlags: 0

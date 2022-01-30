@@ -5,7 +5,7 @@ using UnityEngine;
 public class CursorLocker : MonoBehaviour
 {
     [SerializeField]
-    private string _cancelString = "Cancel";
+    private string _cancelString = "Cursor";
 
     private void Awake()
     {

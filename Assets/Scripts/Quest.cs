@@ -4,14 +4,19 @@ using System.Collections.Generic;
 
 public class Quest : MonoBehaviour
 {
+    // Reference to the NPC game object we interact with
+    public GameObject npcObject;
+
+    // Reference to the player game object (3D character)
+    public GameObject playerObject;
+
     // Reference to the player and its inventory
     public PlayerWithInventory player;
 
     // Reference to the DialogDisplay
     public DialogDisplay dialogDisplay;
 
-    // Just for development
-    public KeyCode keyCode;
+    private KeyCode _keyCode = KeyCode.E;
 
     // Conversations that expect should have 4 entries:
     // 0: initial conversation
@@ -25,6 +30,7 @@ public class Quest : MonoBehaviour
     public List<Conversation> conversations = new List<Conversation>();
     private int _currentConversationIndex = 0;
     private int _previousConversationIndex = 0;
+    private float _distanceThreshold = 3.5f;
 
     public bool givesItem = false;
     public ItemObject itemToGive;
@@ -41,9 +47,9 @@ public class Quest : MonoBehaviour
 
     void Update()
     {
-        // TODO: falta verificar que estés en proximidad
-        // con el character
-        if (Input.GetKeyDown(keyCode))
+        float distance = Vector3.Distance(npcObject.transform.position, playerObject.transform.position);
+
+        if (distance < _distanceThreshold && Input.GetKeyDown(_keyCode))
         {
             StartConversation();
         }

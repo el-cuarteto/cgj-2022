@@ -95,7 +95,7 @@ public class Quest : MonoBehaviour
 
     private void ContinueConversation()
     {
-        if (_previousConversationIndex != _currentConversationIndex && (isTakingItem() || isGivingItem()))
+        if (_previousConversationIndex != _currentConversationIndex && (isTakingItem() || isGivingItem() || _currentConversationIndex == conversations.Count-1))
         {
             StartConversation();
         }

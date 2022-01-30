@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   easeInTime: 0.5
   easeOutTime: 0.5
-  poetryText: This World is made of ups and downs, the Man is due to live and fear
-    the time his face is but a frown, and days last hours, and weeks last years.
+  poetryText: "This World is made of ups and downs, \n\nthe Man is due to live and
+    fear \n\nthe time his face is but a frown, \n\nand days last hours, and weeks
+    last years."
 --- !u!114 &-3728351696315436672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,39 +107,6 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 22
     m_ClipIn: 0
-    m_Asset: {fileID: -1368550445957466841}
-    m_Duration: 10
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -3728351696315436672}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: Verso 3
-  - m_Version: 1
-    m_Start: 33
-    m_ClipIn: 0
     m_Asset: {fileID: 6799438969312890618}
     m_Duration: 10
     m_TimeScale: 1
@@ -170,7 +138,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Verso 4
   - m_Version: 1
-    m_Start: 44
+    m_Start: 33
     m_ClipIn: 0
     m_Asset: {fileID: -1214368778204071304}
     m_Duration: 10
@@ -204,23 +172,6 @@ MonoBehaviour:
     m_DisplayName: Verso 5
   m_Markers:
     m_Objects: []
---- !u!114 &-1368550445957466841
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f01231c385768a4882685e357a2c6ed, type: 3}
-  m_Name: PoetryClipAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  easeInTime: 0.5
-  easeOutTime: 0.5
-  poetryText: 'But hidden in what is to one most dear you can find bravery and hope,
-    happiness and love: within the Heart, where the Mind dwells and the Soul steers,
-    lays a well of dreams and goals to be proud of.'
 --- !u!114 &-1295228627626245176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 55.75
+  m_Time: 45.1
   m_Retroactive: 0
   m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 569ffa57951989a49a23c4ea27ab96f1, type: 2}
@@ -251,8 +202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   easeInTime: 0.5
   easeOutTime: 0.5
-  poetryText: Look inside, dear Player, and find what matters most! And through fires
-    and flames may you find restful coasts!
+  poetryText: "Look inside, dear Player, and find what matters most! \n\nAnd through
+    fires and flames may you find restful coasts!"
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,9 +310,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   easeInTime: 0.5
   easeOutTime: 0.5
-  poetryText: And if one can reach within, take off the gloves, rethink of what matters
-    most in this Life, one's worries and fears one surely can shove and proudly wear
-    the biggest smile.
+  poetryText: "And if one can reach within, take off the gloves, \n\nrethink of what
+    matters most in this Life, \n\none's worries and fears one surely can shove \n\nand
+    proudly wear the biggest smile."
 --- !u!114 &7496196295142890309
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -384,7 +335,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 54
+    m_Start: 43.6
     m_ClipIn: 0
     m_Asset: {fileID: 271682078257488377}
     m_Duration: 2
@@ -450,7 +401,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 54
+    m_PreExtrapolationTime: 43.6
     m_DisplayName: FadeIn
   m_Markers:
     m_Objects: []
@@ -486,6 +437,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   easeInTime: 0.5
   easeOutTime: 0.5
-  poetryText: 'But hidden in what is to one most dear you can find bravery and hope,
-    happiness and love: within the Heart, where the Mind dwells and the Soul steers,
-    lays a well of dreams and goals to be proud of.'
+  poetryText: "But hidden in what is to one most dear \n\nyou can find bravery and
+    hope, happiness and love:\n\nwithin the Heart, where the Mind dwells and the
+    Soul steers, \n\nlays a well of dreams and goals to be proud of."

@@ -5730,7 +5730,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4939798860542469821}
         m_TargetAssemblyTypeName: AudioPlay, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5745,7 +5745,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4939798860542469821}
         m_TargetAssemblyTypeName: AudioPlay, Assembly-CSharp
-        m_MethodName: Stop
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

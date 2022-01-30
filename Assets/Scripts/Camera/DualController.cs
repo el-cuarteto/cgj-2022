@@ -8,7 +8,9 @@ public class DualController : MonoBehaviour
 
     private static DualController instance = null;
 
-    private bool mainEnabled = true;
+    private bool _mainEnabled = true;
+
+    public bool IsMainMixEnabled => _mainEnabled;
 
     [SerializeField]
     private DualSerializedObject _mainMix;
@@ -28,7 +30,7 @@ public class DualController : MonoBehaviour
             return;
         }
         instance = this;
-        mainEnabled = true;
+        _mainEnabled = true;
         Debug.Assert(_mainMix != null, "Main Mix was null", this);
         Debug.Assert(_dualMix != null, "Dual Mix was null", this);
     }
@@ -43,15 +45,15 @@ public class DualController : MonoBehaviour
     {
         if (Input.GetButtonDown(_dualButton))
         {
-            if (mainEnabled)
+            if (_mainEnabled)
             {
                 DualMixer.ChangeMix(_dualMix, _swapTime);
-                mainEnabled = false;
+                _mainEnabled = false;
             }
             else
             {
                 DualMixer.ChangeMix(_mainMix, _swapTime);
-                mainEnabled = true;
+                _mainEnabled = true;
             }
         }
     }
@@ -61,7 +63,7 @@ public class DualController : MonoBehaviour
         Debug.Assert(newDual != null, "Dual Mix was null", instance);
 
         instance._dualMix = newDual;
-        if (!instance.mainEnabled)
+        if (!instance._mainEnabled)
         {
             DualMixer.ChangeMix(instance._dualMix, instance._swapTime);
         }
@@ -72,7 +74,7 @@ public class DualController : MonoBehaviour
         Debug.Assert(newMain != null, "Main Mix was null", instance);
 
         instance._mainMix = newMain;
-        if (instance.mainEnabled)
+        if (instance._mainEnabled)
         {
             DualMixer.ChangeMix(instance._mainMix, instance._swapTime);
         }
